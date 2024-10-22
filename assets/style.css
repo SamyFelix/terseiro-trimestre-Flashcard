@@ -1,33 +1,38 @@
-:root{
-    --text-color: #DBE4EF;
-    --card-front-color: #144480;
-    --card-back-color: #00F4BF;
+:root {
+    --text-color: #dbe4ef;
+    --card-front-color: #00f4bf;
+    --card-back-color: #144480;
 }
-body{
-    background:url('img/bg-desktop.webp');
+
+body {
+    background: url('img/bg-desktop.webp');
     font-family: "Bai Jamjuree", sans-serif;
 }
-#conteiner{
+
+#container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 4rem;
     gap: 3rem;
 }
-.cartao{
+
+.cartao {
     margin: 1rem 1rem;
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
 }
-.cartao_conteudo{
+
+.cartao__conteudo {
     text-align: center;
-    background-color: var(--card-front-color);
+    background-color: var(--card-back-color);
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
 }
-.cartao_conteudo h3{
+
+.cartao__conteudo h3 {
     color: var(--text-color);
     border: 1px solid var(--text-color);
     text-align: left;
@@ -37,43 +42,54 @@ body{
     border-radius: 0.6rem;
     font-size: 1vw;
     backface-visibility: hidden;
+
 }
-.cartao_conteudo p{
+
+.cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
-    margin: 4rem;
+    margin-top: 4rem;
+
 }
-.cartao_conteudo_pergunta p{
+
+.cartao__conteudo__pergunta p {
     color: var(--text-color);
     font-weight: 500;
 }
-.cartao_conteudo_resposta p{
-    color: var(--card-back-color);
+
+.cartao__conteudo__resposta p {
+    color: var(--card-front-color);
     font-weight: 700;
 }
-.cartao:hover .cartao_conteudo{
-    transform: rotateY(180deg);
-}
-.cartao_conteudo_pergunta, .cartao_conteudo_resposta{
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
 }
-.cartao_conteudo_resposta{
+
+.cartao__conteudo__resposta {
     transform: rotateY(180deg);
 }
-footer{
+
+footer {
     background-color: black;
     color: white;
-    /*Comando para fixar o rodapé no final*/
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
 }
-footer p{
+
+footer p {
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 0, 6rem;
     margin-top: 0.5rem;
+}
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+
 }
